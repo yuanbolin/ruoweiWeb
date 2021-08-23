@@ -11,13 +11,13 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <script>
         <% if(context.config.define.mode === 'prod') { %>
-          window.server = 'http://192.168.1.162:6103'
+          window.server = ''  //生产环境地址
         <% } %>
         <% if(context.config.define.mode === 'dev') { %>
-          window.server = 'http://192.168.1.160:6101'
+          window.server = ''  //开发环境地址
         <% } %>
         <% if(context.config.define.mode === 'test') { %>
-          window.server = 'http://192.168.1.160:6102'
+          window.server = ''  //测试环境地址
         <% } %>
 
       </script>
