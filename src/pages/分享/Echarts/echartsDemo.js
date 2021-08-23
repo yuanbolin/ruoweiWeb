@@ -73,7 +73,7 @@ export default class componentName extends Component {
         }
       ],
       bingtuData: {
-        label: ['直接访问','邮件营销', '联盟广告', '视频广告'],
+        label: ['直接访问', '邮件营销', '联盟广告', '视频广告'],
         data: [112, 234, 135, 310],
         color: ['#333', '#789', '#acd', '#daa']
       },
@@ -94,12 +94,12 @@ export default class componentName extends Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <div style={{ height: '75vh', width: '50%' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', height: '75vh' }}>
+        <div style={{ flex: 1, overflow: 'hidden' }}>
           <Zhuzhuangtu params={JSON.stringify(this.state.zhuzhuangtuData)} heighttemp='50%' />
           <Zhexiantu params={JSON.stringify(this.state.zhexiantuData)} heighttemp='50%' />
         </div>
-        <div style={{ height: '75vh', width: '50%' }}>
+        <div style={{ flex: 1, overflow: 'hidden' }}>
           <Bingtu params={JSON.stringify(this.state.bingtuData)} heighttemp='50%' />
           <Xiangxingtu params={JSON.stringify(this.state.qicaiBarParams)} data={this.state.qicaiData} heighttemp='50%' />
         </div>

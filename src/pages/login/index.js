@@ -59,9 +59,8 @@ class Login extends Component {
           sessionStorage.clear() // 重新登录时，需要清除
           sessionStorage.setItem('token', 'token_test')
           sessionStorage.setItem('name', '游客')
-          sessionStorage.setItem('login', '123456')
           sessionStorage.setItem('id', '123456')
-          sessionStorage.setItem('touxiang', 'resource/image/20210312174909046.jpg')
+          sessionStorage.setItem('touxiang', '')
           sessionStorage.setItem('roleName', '游客访问')
           this.setState(
             {
