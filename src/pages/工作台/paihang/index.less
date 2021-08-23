@@ -1,0 +1,75 @@
+.paihang_div {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  .header_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title_div {
+    font-size: 16px;
+    margin: 14px 0;
+    font-weight: bold;
+  }
+  .content_div {
+    flex: 1;
+    overflow-y: auto;
+    //position: relative;
+    .loading {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+    }
+    .content_item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+      margin: 8px 0;
+      .sort {
+        color: white;
+        height: 20px;
+        width: 20px;
+        background-color: #00baad;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sort2 {
+        background-color: #e5e5e5;
+        color: #383838;
+      }
+      .sort3 {
+        background-color: #fff;
+        color: #383838;
+      }
+      .name {
+        margin-left: 25px;
+      }
+      .count {
+        position: absolute;
+        right: 12px;
+      }
+    }
+  }
+
+  /* 设置滚动条的样式 */
+  .content_div::-webkit-scrollbar {
+    width: 2px;
+    background-color: #e5e5e5;
+  }
+
+  /* 滚动槽 */
+  .content_div::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* 滚动条滑块 */
+  .content_div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #00baad;
+  }
+}

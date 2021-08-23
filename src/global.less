@@ -1,0 +1,227 @@
+
+// 主题颜色 非antd组件 主题色设置（和 defaultSettings.js 中 primaryColor 一同设置）
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+.red{
+  color:red;
+}
+
+.ant-breadcrumb{
+    padding:12px 0;
+    font-size: 14px;
+}
+
+.ant-table-wrapper{
+    margin:20px 0 0 0;
+}
+.editable-cell {
+    position: relative;
+}
+.ant-menu-item .menu-span a{
+  color: rgba(0,0,0,0.65 ) !important;
+}
+
+.breadcrumb-box{
+ padding: 10px 30px;
+ background-color: #fff;
+ border:1px solid rgba(233, 233, 233, 1);
+ .main-tit{
+     margin: 15px 0 10px 0;
+     color: rgba(0, 0, 0, 0.847058823529412);
+     font-weight: bold;
+     font-size: 18px;
+
+ }
+}
+
+.content-box{
+ margin: 25px 20px;
+ padding: 20px 20px;
+ background-color: #fff;
+}
+
+.rw-row.ant-row{
+ margin-bottom: 15px;
+ label{
+     color: rgba(0, 0, 0, 0.847058823529412);
+     display: block;
+     padding: 0 0 10px 0 ;
+ }
+ .ant-calendar-picker,.ant-select{
+     width: 100%;
+ }
+}
+
+
+
+.form-view {
+  min-height: 93%;
+  margin:0 15px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+  & .form-head {
+    position: relative;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 20px 10px 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  & .form-content {
+    display: flex;
+    min-height: 700px;
+    padding:10px;
+  }
+
+  & .columnLayout {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  & .formLayoutToolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    line-height: 20px;
+    -webkit-transition: opacity linear 0.15s;
+    -moz-transition: opacity linear 0.15s;
+    transition: opacity linear 0.15s;
+
+    & .fm-btn{
+      margin-left: 1px;
+      padding: 0 5px;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  & .fm-btn-del {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  & .formPlaceholder,
+  & .form-placeholder-filed {
+    height: 80px;
+  }
+
+  & .ui-sortable{
+    width: 100%;
+    min-height:50px;
+  }
+
+  & .component{
+    position: relative;
+    cursor: pointer;
+
+    &.active{
+      background: #fff8dc;
+      border-color: #ddd;
+
+      & .fm-btn-remove{
+        display: block !important;
+      }
+    }
+  }
+
+  & .component-layout {
+    position: relative;
+    display: flex;
+    margin-bottom: -1px;
+    cursor: pointer;
+
+    & .component-layout{
+      border-right: none;
+      border-left:none;
+    }
+
+    & .component-layout:first-child{
+      border-top: none;
+    }
+  }
+
+  & .column-layout{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+
+    & .cell{
+      display: table-cell;
+      height: 50px;
+      vertical-align: top;
+    }
+
+    & .cell:first-child{
+      border-left: none !important;
+    }
+
+  }
+
+  & .component-field{
+    position: relative;
+    background: #fff;
+    padding: 8px 10px 8px;
+    border: 1px dashed rgba(0,0,0,0);
+
+    & .fm-btn-remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      display: none;
+      color: #d14836;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    & .field-title {
+      float: left;
+      width: 80px;
+      margin-top: 5px;
+      text-align: right;
+    }
+    & .field-content {
+      position: relative;
+      min-height: 30px;
+      margin-left: 90px;
+    }
+  }
+
+  & .component-field,
+  & .component-layout {
+    &.active {
+      background: #fff8dc;
+      border-color: #ddd;
+    }
+  }
+}
+
+.form-designer{
+  display: flex;
+  height: 100%;
+  background: #f0f2f5;
+  .form-desidiv1{
+    width: 30%;
+  }
+  .form-desidiv2{
+    width: 40%;
+  }
+}
+
+.antd-pro-pages-bpmn-process-manage-bpmn-editor-sources-bpmn-container .properties-panel-parent {
+  background-color: #f8f8f8
+}

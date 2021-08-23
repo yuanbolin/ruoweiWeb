@@ -1,0 +1,41 @@
+/**
+* @name: Amap.css
+* @author: 苑博林
+* @date: 2020/12/21 14:48
+* @description：Amap
+* @update: 2020/12/21 14:48
+*/
+.tipMarker {
+  color: #555;
+  background-color: rgba(255, 254, 239, 0.8);
+  border: 1px solid #7e7e7e;
+  padding: 2px 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.tipMarker:before,
+.tipMarker:after {
+  content: '';
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 5px 5px;
+}
+.tipMarker.top {
+  transform: translate(-50%, -110%);
+}
+.tipMarker.top:before,
+.tipMarker.top:after {
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  border-top-color: rgba(255, 254, 239, 0.8);
+}
+.tipMarker.top:before {
+  bottom: -10px;
+  border-top-color: #7e7e7e;
+}

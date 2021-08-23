@@ -1,0 +1,51 @@
+.container {
+  padding: 12px 32px 32px;
+
+  .content {
+    padding-left: 10px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .dongtaiItem {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .text {
+    padding-left: 10px;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+  }
+
+  .oneline {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 0;
+    height: 21px;
+    display: inline-block;
+  }
+
+  .ellipsis::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+  }
+
+  .time {
+    color: rgba(0, 0, 0, 0.45);
+  }
+}

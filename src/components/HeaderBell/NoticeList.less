@@ -1,0 +1,124 @@
+@import '~antd/es/style/themes/default.less';
+
+.header_bell_popover_box {
+  position: relative;
+  width: 336px;
+  margin: 15px 0 0 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow:0 2px 8px rgba(0, 0, 0, 0.15);
+
+  :global(.ant-tabs-nav-scroll) {
+    text-align: center;
+  }
+  :global(.ant-tabs-bar){
+    margin-bottom: 0;
+  }
+
+  .notice_list {
+    max-height: 400px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .notice_list_item {
+      padding-right: 24px;
+      padding-left: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      .notice_list_item_meta {
+        width: 100%;
+      }
+
+      .notice_list_item_avatar {
+        margin-top: 4px;
+        background: #fff;
+      }
+      .iconElement {
+        font-size: 32px;
+      }
+
+      &.read {
+        opacity: 0.4;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:hover {
+        background: @primary-1;
+      }
+      .notice_list_item_meta_title {
+        margin-bottom: 8px;
+        font-weight: normal;
+      }
+      .notice_list_item_meta_extra_description {
+        font-size: 12px;
+        line-height: @line-height-base;
+      }
+      .notice_list_item_meta_extra_datetime {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: @line-height-base;
+      }
+      .notice_list_item_meta_extra {
+        float: right;
+        margin-top: -1.5px;
+        margin-right: 0;
+        color: @text-color-secondary;
+        font-weight: normal;
+      }
+    }
+    .loadMore {
+      padding: 8px 0;
+      color: @primary-6;
+      text-align: center;
+      cursor: pointer;
+      &.loadedAll {
+        color: rgba(0, 0, 0, 0.25);
+        cursor: unset;
+      }
+    }
+  }
+
+  .notFound {
+    padding: 73px 0 88px;
+    color: @text-color-secondary;
+    text-align: center;
+    img {
+      display: inline-block;
+      height: 76px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .notice_list_item_bottomBar {
+    height: 46px;
+    color: @text-color;
+    line-height: 46px;
+    text-align: center;
+    border-top: 1px solid @border-color-split;
+    border-radius: 0 0 @border-radius-base @border-radius-base;
+    transition: all 0.3s;
+    .notice_list_item_bottomBar_div {
+      display: inline-block;
+      width: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+      user-select: none;
+      &:hover {
+        color: @heading-color;
+      }
+      &:only-child {
+        width: 100%;
+      }
+      &:not(:only-child):last-child {
+        border-left: 1px solid @border-color-split;
+      }
+    }
+  }
+
+
+
+}
