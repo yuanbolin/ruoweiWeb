@@ -25,6 +25,35 @@ class Login extends Component {
           username: values.username && values.username.replace(/^\s+|\s+$/g, ''), // 去除首尾空格
           password: values.password
         }
+
+        // post('authenticate', newParams)
+        //   .then(res => {
+        //     const data = res.data
+        //     sessionStorage.clear() // 重新登录时，需要清除
+        //     sessionStorage.setItem('token', data.id_token)
+        //     get(`personalMessage`).then(response => {
+        //       const login_info = response.data
+        //       sessionStorage.setItem('name', login_info.name)
+        //       sessionStorage.setItem('login', login_info.login)
+        //       sessionStorage.setItem('id', login_info.id)
+        //       sessionStorage.setItem('touxiang', login_info.image)
+        //       sessionStorage.setItem('roleName', login_info.role)
+        //       this.setState(
+        //         {
+        //           loading: false
+        //         },
+        //         () => {
+        //           router.push('/main')
+        //         }
+        //       )
+        //     })
+        //   })
+        //   .catch(() => {
+        //     this.setState({
+        //       loading: false
+        //     })
+        //   })
+
         //模拟1000延迟登录接口效果
         setTimeout(() => {
           sessionStorage.clear() // 重新登录时，需要清除

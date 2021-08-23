@@ -10,16 +10,12 @@ import styles from './NewLayout.less'
 import 'moment/locale/zh-cn'
 import BasicMenu from './Menu'
 import { post } from '@/utils/http'
-import WorkDrawer from '../pages/工作台/workDrawer/index'
 
 moment.locale('zh-cn')
 const { Header, Content, Footer } = Layout
 export default class NewLayout extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      isShow: false
-    }
   }
 
   // 退出
@@ -34,18 +30,6 @@ export default class NewLayout extends Component {
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed
-    })
-  }
-
-  showDrawer = () => {
-    this.setState({
-      isShow: true
-    })
-  }
-
-  closeDrawer = () => {
-    this.setState({
-      isShow: false
     })
   }
 
@@ -97,9 +81,6 @@ export default class NewLayout extends Component {
                 </a>
               </Dropdown>
               {/*<HeaderBell color={defaultSettings.navTheme === 'light' ? 'black' : 'white'} />*/}
-              <Button type='primary' onClick={this.showDrawer} style={{ margin: '14px 0 0 30px', boxShadow: '0 0 5px  rgba(0, 0, 0, 0.35)' }}>
-                快速创建工作
-              </Button>
             </Header>
           )}
           <Row>
@@ -107,16 +88,13 @@ export default class NewLayout extends Component {
               <Content
                 style={{
                   width: '100%',
-                  maxWidth: defaultSettings.contentWidth + 'px',
+                  maxWidth: `${defaultSettings.contentWidth}px`,
                   margin: '0 auto',
                   minHeight: `calc(100vh - ${defaultSettings.headerHeight + 81}px)`
                 }}
               >
                 {defaultSettings.BreadcrumbsRender && <Breadcrumbs />}
-                <div className={styles.contentBox} key={this.state.isShow}>
-                  {this.props.content}
-                </div>
-                {this.state.isShow ? <WorkDrawer visible={this.state.isShow} close={this.closeDrawer} mode='创建工作' /> : ''}
+                <div className={styles.contentBox}>{this.props.content}</div>
               </Content>
             </Col>
           </Row>
