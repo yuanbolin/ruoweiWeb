@@ -26,6 +26,7 @@ export default class Peculiarity extends Component {
     }
     return (
       <div>
+        <div>两个输入框均为子组件，要求值互相关联哪一个发生变化另一个会随之变化</div>
         <Input type='sheshidu' value={sheshidu} changeInput={this.changeInput} />
         <Input type='huashidu' value={huashidu} changeInput={this.changeInput} />
       </div>
